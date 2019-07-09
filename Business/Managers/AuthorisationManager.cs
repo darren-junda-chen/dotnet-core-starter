@@ -127,8 +127,6 @@ namespace Business.Managers
                 new Claim(AuthClaimTypes.AuthTokenId, authToken.Id.ToString()),
                 new Claim(AuthClaimTypes.UserId, user.Id.ToString())
             };
-
-      // Generate ali cloud temporary token
       var accessToken = GenerateAccessToken(claims);
 
       return new AccessGrantDto
